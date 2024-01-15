@@ -1,4 +1,3 @@
-# Python projekts
-## Netflix reģiona noteikšana
+# Python projekts - Netflix reģiona noteikšana
 
 
