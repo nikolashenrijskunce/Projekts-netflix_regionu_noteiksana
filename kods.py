@@ -18,3 +18,10 @@ url = "https://www.google.com/"
 # Atver mājaslapu, uz kuru aizved adrese.
 driver.get(url)
 time.sleep(0.5)
+
+# Noraida Google sīkfailus
+decline_cookies = driver.find_element(By.ID, "W0wltc")
+decline_cookies.click()
+time.sleep(0.1)
+
+
