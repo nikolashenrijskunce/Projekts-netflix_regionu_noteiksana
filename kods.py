@@ -43,14 +43,23 @@ find = driver.find_element(By.XPATH, "//a[@jsname='UWckNb']")
 link = find.get_attribute("href")
 driver.close()
 
-# Izvelk Netflix reģiona kodu no saites adreses un atrod atbilstošo valsti Excel tabulā.
+# Definē mainīgos, kādi tiks izmantoti, lai atrastu valsti, kurā ir filma ir pieejama.
 b = []
 b = link 
+page_name = b[12] + b[13] + b[14] + b[15] + b[16] + b[17] + b[18] 
 region = b[24] + b[25]
-wb = load_workbook('CountryCodes.xlsx')
-ws = wb.active
-for row in range (1, 250):
-  country_code=(ws['b' + str(row)].value)
-  country_name=(ws['a' + str(row)].value)
-  if (country_code == region):
-    print("Region: " + country_name)
+
+# Izvelk Netflix reģiona kodu no saites adreses un atrod atbilstošo valsti Excel tabulā. Izvada rezultātu.
+if (page_name == "netflix" and (region + b[26] + b[27] + b[28] + b[29]) != "search"):
+  if ((region + b[26] + b[27] + b[28]) == "title"):
+    print("Region: Latvia")
+  else:
+    wb = load_workbook('CountryCodes.xlsx')
+    ws = wb.active
+    for row in range (1, 250):
+      country_code=(ws['b' + str(row)].value)
+      country_name=(ws['a' + str(row)].value)
+      if (country_code == region):
+        print("Region: " + country_name)
+else:
+  print("This movie is not available on Netflix")
