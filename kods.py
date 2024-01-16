@@ -43,13 +43,14 @@ find = driver.find_element(By.XPATH, "//a[@jsname='UWckNb']")
 link = find.get_attribute("href")
 driver.close()
 
-# 
+# Izvelk Netflix reģiona kodu no saites adreses un atrod atbilstošo valsti Excel tabulā.
+b = []
+b = link 
+region = b[24] + b[25]
 wb = load_workbook('CountryCodes.xlsx')
 ws = wb.active
-region = 
 for row in range (1, 250):
   country_code=(ws['b' + str(row)].value)
   country_name=(ws['a' + str(row)].value)
   if (country_code == region):
-    print(country_name)
-print(link)
+    print("Region: " + country_name)
