@@ -41,3 +41,5 @@ time.sleep(1)
 find = driver.find_element(By.XPATH, "//a[@jsname='UWckNb']")
 link = find.get_attribute("href")
 driver.close()
+
+print(link)
