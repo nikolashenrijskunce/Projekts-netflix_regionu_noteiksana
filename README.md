@@ -21,5 +21,11 @@ Programmas lietošanas instrukcija:
 Progrmmā ir izmantotas 2 Python bibliotēkas - Selenium un Openpyxl. Selenium bibliotēka tiek izmantota, lai varētu izmantot Google Search funkcionalitāti caur Google Chrome interneta pārlūku. Kā arī ar to tiek atrasta un izvilkta filmas lapas adrese. Openpyxl tiek izmantots, lai varētu nolasīt informāciju no Excel faila, kurā ir teritoriju kodi un blakus tiem ir norādīti atbilstošo teritoriju nosaukumi. Tā var noteikt kurā valstī filma ir pieejama.
 
 Programma soli pa solim darbojas šādi:
-1. Importē bibliotēkas
-2. Izvada uz ekrāna ""
+1. Importē bibliotēkas.
+2. Izvada uz ekrāna "Ievadiet filmas nosaukumu: ".
+3. Pēc nosaukuma ievades, atver Google Chrome pārlūku un tajā atver Google mājaslapu.
+4. Gaida 0,5 sekundes un pēc tam atrod pogu "Reject all" Google sīkfailu logā un to noklikšķina.
+5. Gaida 0,1 sekundi, lai pazūd sīkfailu logs un tad atrod meklēšanas teksta logu, kurā ieraksta lietotāja ievadīto filmas nosaukumu un klāt tam pieraksta " netflix" un nospiež enter pogu.
+6. Gaida 1 sekundi un nolasa pirmā rezultāta interneta lapas adresi, pēc kā Google Chrome pārlūks tiek aizvērts.
+7. 
+
