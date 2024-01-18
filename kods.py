@@ -7,7 +7,7 @@ import time
 from openpyxl import Workbook, load_workbook
 
 # Lietotājam dod ievadīt meklētās filmas nosaukumu.
-print("Filmas nosaukums: ")
+print("Ievadiet filmas nosaukumu: ")
 film = input()
 
 # Nodefinē mainīgo driver, lai programma spētu kontrolēt pārlūkprogrammu Google Chrome.
