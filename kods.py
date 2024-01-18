@@ -52,7 +52,7 @@ region = b[24] + b[25]
 # Izvelk Netflix reģiona kodu no saites adreses un atrod atbilstošo valsti Excel tabulā. Izvada rezultātu.
 if (page_name == "netflix" and (region + b[26] + b[27] + b[28] + b[29]) != "search"):
   if ((region + b[26] + b[27] + b[28]) == "title"):
-    print("Region: Latvia")
+    print("Šī filma ir pieejama Jūsu pašreizējā reģionā.")
   else:
     wb = load_workbook('CountryCodes.xlsx')
     ws = wb.active
@@ -60,6 +60,6 @@ if (page_name == "netflix" and (region + b[26] + b[27] + b[28] + b[29]) != "sear
       country_code=(ws['b' + str(row)].value)
       country_name=(ws['a' + str(row)].value)
       if (country_code == region):
-        print("Region: " + country_name)
+        print("Filma ir pieejama šādā reģionā: " + country_name)
 else:
-  print("This movie is not available on Netflix")
+  print("Šī filma nav pieejama vietnē Netflix.")
