@@ -27,5 +27,7 @@ Programma soli pa solim darbojas šādi:
 4. Gaida 0,5 sekundes un pēc tam atrod pogu "Reject all" Google sīkfailu logā un to noklikšķina.
 5. Gaida 0,1 sekundi, lai pazūd sīkfailu logs un tad atrod meklēšanas teksta logu, kurā ieraksta lietotāja ievadīto filmas nosaukumu un klāt tam pieraksta " netflix" un nospiež enter pogu.
 6. Gaida 1 sekundi un nolasa pirmā rezultāta interneta lapas adresi, pēc kā Google Chrome pārlūks tiek aizvērts.
-7. 
+7. Adresi saraksta veidā sadala locekļos un izvelk reģionu no adreses.
+8. Pēc adreses nosaka, vai šī adrese ir Netflix lapas adrese un vai šajai adresei ir norādīts reģions.
+9. Ja ir reģions norādīts, tad excel failā tiek atrasts atbilstošā reģiona nosaukums un tas tiek izvadīts uz ekrāna.
 
